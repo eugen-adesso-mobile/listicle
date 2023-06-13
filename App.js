@@ -11,7 +11,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from './src/screens/app/Home';
 import Favorites from './src/screens/app/Favorites';
 import Profile from './src/screens/app/Profile';
-import { Image } from "react-native";
+import {Image} from 'react-native';
+import ProductDetails from './src/screens/app/ProductDetails';
 
 const GOOGLE_WEB_CLIENT_ID =
   '188791616073-2c97b2o3jac3oi1u2p0lj1asv9k7ocmo.apps.googleusercontent.com';
@@ -23,8 +24,8 @@ const BottomTab = createBottomTabNavigator();
 
 const BottomTabs = () => (
   <BottomTab.Navigator
-    screenOptions={({ route }) => ({
-      tabBarIcon: ({ focused, color, size }) => {
+    screenOptions={({route}) => ({
+      tabBarIcon: ({focused, color, size}) => {
         let icon;
 
         if (route.name === 'Home') {
@@ -79,7 +80,16 @@ const App = () => {
         <Stack.Navigator>
           {isSignedIn ? (
             <>
-              <Stack.Screen name="BottomTabs" component={BottomTabs} options={{headerShown: false}} />
+              <Stack.Screen
+                name="BottomTabs"
+                component={BottomTabs}
+                options={{headerShown: false}}
+              />
+              <Stack.Screen
+                name="ProductDetails"
+                component={ProductDetails}
+                options={{headerShown: false}}
+              />
             </>
           ) : (
             <>
