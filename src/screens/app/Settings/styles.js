@@ -12,8 +12,8 @@ export const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontWeight: '500',
-    fontSize: 16,
-    color: colors.grey,
+    fontSize: 14,
+    color: colors.blue,
     marginBottom: 16,
   },
   sectionHeader: {

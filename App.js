@@ -14,6 +14,7 @@ import Profile from './src/screens/app/Profile';
 import Settings from './src/screens/app/Settings';
 import {Image} from 'react-native';
 import ProductDetails from './src/screens/app/ProductDetails';
+import CreateListing from './src/screens/app/CreateListing';
 
 const GOOGLE_WEB_CLIENT_ID =
   '188791616073-2c97b2o3jac3oi1u2p0lj1asv9k7ocmo.apps.googleusercontent.com';
@@ -36,6 +37,11 @@ const ProfileStack = () => {
         component={Settings}
         options={{headerShown: false}}
       />
+      <Stack.Screen
+        name="CreateListing"
+        component={CreateListing}
+        options={{headerShown: false}}
+      />
     </Stack.Navigator>
   );
 };
@@ -43,7 +49,7 @@ const ProfileStack = () => {
 const BottomTabs = () => (
   <BottomTab.Navigator
     screenOptions={({route}) => ({
-      tabBarIcon: ({focused, color, size}) => {
+      tabBarIcon: ({focused}) => {
         let icon;
 
         if (route.name === 'Home') {
@@ -61,6 +67,7 @@ const BottomTabs = () => (
         }
 
         // You can return any component that you like here!
+        // eslint-disable-next-line react-native/no-inline-styles
         return <Image style={{width: 24, height: 24}} source={icon} />;
       },
       headerShown: false,

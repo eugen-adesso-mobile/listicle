@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import {styles} from './styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Header from '../../../components/Header';
@@ -15,7 +15,12 @@ const Profile = ({navigation}) => {
     navigation.navigate('Settings');
   };
 
+  const onNewListingPress = () => {
+    navigation.navigate('CreateListing');
+  };
+
   return (
+    // eslint-disable-next-line react-native/no-inline-styles
     <SafeAreaView style={{flex: 1}}>
       <Header title="Profile" showLogout onLogout={onLogout} />
       <View style={styles.container}>
@@ -29,8 +34,11 @@ const Profile = ({navigation}) => {
             subtitle="Account, FAQ, Contact"
           />
         </View>
-
-        <Button style={{flex: 0}} title="Add new Listing" />
+        <Button
+          onPress={onNewListingPress}
+          style={styles.button}
+          title="Add new Listing"
+        />
       </View>
     </SafeAreaView>
   );
