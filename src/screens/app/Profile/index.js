@@ -19,6 +19,10 @@ const Profile = ({navigation}) => {
     navigation.navigate('CreateListing');
   };
 
+  const onMyListingsPress = () => {
+    navigation.navigate('MyListings');
+  };
+
   return (
     // eslint-disable-next-line react-native/no-inline-styles
     <SafeAreaView style={{flex: 1}}>
@@ -27,7 +31,11 @@ const Profile = ({navigation}) => {
         <View style={styles.content}>
           <Text style={styles.name}>User name</Text>
           <Text style={styles.email}>Email</Text>
-          <ListItem title="My Listings" subtitle={`You have ${num} listings`} />
+          <ListItem
+            onPress={onMyListingsPress}
+            title="My Listings"
+            subtitle={`You have ${num} listings`}
+          />
           <ListItem
             onPress={onSettingsPress}
             title="Settings"

@@ -19,7 +19,6 @@ export const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    // borderWidth: 1,
   },
   button: {
     flex: 0,
