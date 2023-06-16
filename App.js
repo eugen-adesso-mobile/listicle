@@ -11,6 +11,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from './src/screens/app/Home';
 import Favorites from './src/screens/app/Favorites';
 import Profile from './src/screens/app/Profile';
+import Settings from './src/screens/app/Settings';
 import {Image} from 'react-native';
 import ProductDetails from './src/screens/app/ProductDetails';
 
@@ -22,6 +23,23 @@ const GOOGLE_IOS_ID =
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
 
+const ProfileStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Profile"
+        component={Profile}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Settings"
+        component={Settings}
+        options={{headerShown: false}}
+      />
+    </Stack.Navigator>
+  );
+};
+
 const BottomTabs = () => (
   <BottomTab.Navigator
     screenOptions={({route}) => ({
@@ -32,7 +50,7 @@ const BottomTabs = () => (
           icon = focused
             ? require('./src/assets/tabs/home_active.png')
             : require('./src/assets/tabs/home.png');
-        } else if (route.name === 'Profile') {
+        } else if (route.name === 'ProfileStack') {
           icon = focused
             ? require('./src/assets/tabs/profile_active.png')
             : require('./src/assets/tabs/profile.png');
@@ -53,7 +71,7 @@ const BottomTabs = () => (
     })}>
     <BottomTab.Screen name="Home" component={Home} />
     <BottomTab.Screen name="Favorites" component={Favorites} />
-    <BottomTab.Screen name="Profile" component={Profile} />
+    <BottomTab.Screen name="ProfileStack" component={ProfileStack} />
   </BottomTab.Navigator>
 );
 const App = () => {
