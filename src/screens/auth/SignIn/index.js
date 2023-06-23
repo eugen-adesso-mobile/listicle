@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {ScrollView, Text} from 'react-native';
 import {styles} from './styles';
 import AuthHeader from '../../../components/AuthHeader';
@@ -6,7 +6,7 @@ import Input from '../../../components/Input';
 import Button from '../../../components/Button';
 import Separator from '../../../components/Separator';
 import GoogleLogin from '../../../components/GoogleLogin';
-import { SafeAreaView } from "react-native-safe-area-context";
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const SignIn = ({navigation}) => {
   const onSignUp = () => {

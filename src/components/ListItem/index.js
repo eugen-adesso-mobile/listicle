@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Pressable, Text, TouchableOpacity, View } from "react-native";
+import {Image, Pressable, Text, View} from 'react-native';
 import {styles} from './styles';
 
 const ListItem = ({title, subtitle, onPress, style}) => {
@@ -7,9 +7,12 @@ const ListItem = ({title, subtitle, onPress, style}) => {
     <Pressable onPress={onPress} style={[styles.container, style]}>
       <View style={styles.content}>
         <Text style={styles.title}>{title}</Text>
-        {!!subtitle ? (<Text style={styles.subtitle}>{subtitle}</Text>) : null}
+        {subtitle ? <Text style={styles.subtitle}>{subtitle}</Text> : null}
       </View>
-      <Image style={styles.arrow} source={require('../../assets/images/arrow.png')} />
+      <Image
+        style={styles.arrow}
+        source={require('../../assets/images/arrow.png')}
+      />
     </Pressable>
   );
 };

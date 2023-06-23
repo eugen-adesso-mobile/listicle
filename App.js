@@ -88,7 +88,7 @@ const BottomTabs = () => (
   </BottomTab.Navigator>
 );
 const App = () => {
-  const isSignedIn = true;
+  const isSignedIn = false;
 
   useEffect(() => {
     GoogleSignin.configure({

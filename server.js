@@ -5,6 +5,7 @@ export function makeServer({environment = 'test'}) {
     models: {
       notes: Model,
     },
+    // eslint-disable-next-line no-shadow
     seeds(server) {
       server.create('note', {
         title: 'Nulla sit amet',

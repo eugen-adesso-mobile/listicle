@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Text, TouchableOpacity} from 'react-native';
+import {Image, TouchableOpacity} from 'react-native';
 import {styles} from './styles';
 import {
   GoogleSignin,
@@ -7,7 +7,7 @@ import {
 } from '@react-native-google-signin/google-signin';
 
 const GoogleLogin = () => {
-  const hanldeGoogleLogin = async () => {
+  const handleGoogleLogin = async () => {
     try {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
@@ -28,7 +28,7 @@ const GoogleLogin = () => {
   return (
     <TouchableOpacity
       activeOpacity={0.6}
-      onPress={hanldeGoogleLogin}
+      onPress={handleGoogleLogin}
       style={styles.container}>
       <Image
         style={styles.image}

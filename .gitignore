@@ -52,6 +52,7 @@ captures/
 *.iml
 # Ignore entire .idea folder, as we use other tools (prettier) for styling
 .idea
+.idea/
 
 # Keystore files
 # Uncomment the following lines if you do not want to check your keystore files in.
@@ -313,6 +314,9 @@ tmp
 
 # Temporary files created by Metro to check the health of the file watcher
 .metro-health-check*
+
+# testing
+/coverage
 
 # Watchman
 .watchmanconfig

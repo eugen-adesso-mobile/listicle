@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {CameraRoll, FlatList, ScrollView, Text, View} from 'react-native';
+import {FlatList, View} from 'react-native';
 import {styles} from './styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Header from '../../../components/Header';
@@ -8,7 +8,7 @@ import {products} from '../../../data/products';
 import CategoryBox from '../../../components/CategoryBox';
 import ProductHomeItem from '../../../components/ProductHomeItem';
 
-const Home = ({ navigation }) => {
+const Home = ({navigation}) => {
   const [selectedCategory, setSelectedCategory] = useState();
   const [keyword, setKeyword] = useState();
   const [filteredProducts, setFilteredProducts] = useState(products);

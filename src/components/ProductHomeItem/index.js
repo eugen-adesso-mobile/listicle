@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import {Image, Pressable, Text, TouchableOpacity, View} from 'react-native';
+import React from 'react';
+import {Image, Pressable, Text} from 'react-native';
 import {styles} from './styles';
 
-const ProductHomeItem = ({ title, price, image, onPress }) => {
-
+const ProductHomeItem = ({title, price, image, onPress}) => {
   return (
     <Pressable onPress={onPress} style={styles.container}>
-        <Image style={styles.image} source={{uri: image}} />
+      <Image style={styles.image} source={{uri: image}} />
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.price}>{price}</Text>
     </Pressable>

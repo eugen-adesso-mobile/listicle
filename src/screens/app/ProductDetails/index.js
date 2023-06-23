@@ -1,9 +1,9 @@
 import React from 'react';
-import { Image, Linking, Pressable, ScrollView, Text, View } from "react-native";
+import {Image, Linking, Pressable, ScrollView, Text, View} from 'react-native';
 import {styles} from './styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Button from '../../../components/Button';
-import ImageCarousel from "../../../components/ImageCarousel";
+import ImageCarousel from '../../../components/ImageCarousel';
 
 const ProductDetails = ({route, navigation}) => {
   const {product} = route?.params || {};
@@ -15,10 +15,10 @@ const ProductDetails = ({route, navigation}) => {
   const onContact = () => {
     // Make a phone call
     const phone = '127282827';
-    Linking.openURL(`tel:${phone}`);
+    Linking.openURL(`tel:${phone}`).then(r => r);
     // Send an email
     const email = 'info@habrony.de';
-    Linking.openURL(`mailto:${email}`);
+    Linking.openURL(`mailto:${email}`).then(r => r);
   };
 
   return (

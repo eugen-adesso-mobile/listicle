@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Dimensions, FlatList, Image, Text, TouchableOpacity, View } from "react-native";
+import {Dimensions, FlatList, Image, View} from 'react-native';
 import {styles} from './styles';
 
 const {width} = Dimensions.get('window');
@@ -9,7 +9,7 @@ const ImageCarousel = ({images}) => {
     return <Image style={styles.image} source={{uri: item}} />;
   };
 
-  const handleScrollEnd = (e) => {
+  const handleScrollEnd = e => {
     const horizontalOffset = e.nativeEvent.contentOffset.x;
     const index = Math.round(horizontalOffset / width);
     console.log(index);

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import {Image, Pressable, Text, TouchableOpacity, View} from 'react-native';
+import React, {useState} from 'react';
+import {Image, Pressable, Text, View} from 'react-native';
 import {styles} from './styles';
-import Input from "../Input";
+import Input from '../Input';
 
 const Header = ({
   title,
@@ -52,7 +52,11 @@ const Header = ({
         )}
       </View>
       {showSearchInput && (
-        <Input onChangeText={onSearch} value={keyword} placeholder="Type your keyword" />
+        <Input
+          onChangeText={onSearch}
+          value={keyword}
+          placeholder="Type your keyword"
+        />
       )}
     </View>
   );

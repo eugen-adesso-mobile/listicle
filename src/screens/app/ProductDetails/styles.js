@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet } from "react-native";
+import {Dimensions, StyleSheet} from 'react-native';
 import {colors} from '../../../utils/colors';
 
 const {height} = Dimensions.get('window');
@@ -12,8 +12,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  container: {
-  },
+  container: {},
   image: {
     width: '100%',
     height: height * 0.45,
